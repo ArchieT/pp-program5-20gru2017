@@ -15,15 +15,28 @@ unsigned program(unsigned a, unsigned x) {
     auto niezmiennik = [&]() { return weqrpowa(x >> (i + 1)); };
     auto posm = [&]() { return m > 0; };
     assert(niezmiennik());
+    auto sq = [](unsigned a) { return a * a; };
+    auto eqmul = [](int a, int b, int w) {
+        return a * w == b * w;
+    };
+    auto tozmmem = [&]() {
+        return eqmul(m >> 1, 1 << (i - 1), m >> 1);
+    };
+    assert(tozmmem());
     while (m > 0) {
         assert(niezmiennik() && posm());
+        assert(tozmmem());
         w *= w;
         //assert(weqrpowa(x >> i) && posm());
+        assert(tozmmem());
         if (x & m) w *= a;
         //assert(weqrpowa(x >> i + 1) && posm());
+        assert(tozmmem());
         m >>= 1;
         i--;
         assert(niezmiennik());
+        assert(tozmmem());
     }
+    assert(tozmmem());
     return w;
 }
