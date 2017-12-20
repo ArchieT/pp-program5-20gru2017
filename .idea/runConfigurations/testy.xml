@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="testy" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pp_program5_20gru2017" TARGET_NAME="pp_program5_20gru2017_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pp_program5_20gru2017" RUN_TARGET_NAME="pp_program5_20gru2017_test" TEST_MODE="SUITE_TEST">
+    <envs />
+    <method />
+  </configuration>
+</component>
