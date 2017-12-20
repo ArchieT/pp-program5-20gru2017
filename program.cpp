@@ -10,7 +10,7 @@ unsigned program(unsigned a, unsigned x) {
     w = 1;
     i = 30;
     m = static_cast<unsigned int>(1 << i);
-    auto rpow = [](unsigned a, unsigned b) { return round(pow(a, b)); };
+    auto rpow = [](unsigned a, int b) { return round(pow(a, b)); };
     auto weqrpowa = [&](int b) { return w == rpow(a, b); };
     auto niezmiennik = [&]() { return weqrpowa(x >> (i + 1)); };
     auto posm = [&]() { return m > 0; };
