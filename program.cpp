@@ -29,10 +29,14 @@ unsigned program(unsigned a, unsigned x) {
         w *= w;
         //assert(weqrpowa(x >> i) && posm());
         assert(tozmmem());
-        if (x & m) w *= a;
-        //assert(weqrpowa(x >> i + 1) && posm());
+        if (x & m) {
+            w *= a;
+        } else {
+            //assert(weqrpowa(x >> i + 1) && posm());
+        };
         assert(tozmmem());
         m >>= 1;
+        assert(eqmul(m,1<<(i-1),m));
         i--;
         assert(niezmiennik());
         assert(tozmmem());
